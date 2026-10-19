@@ -577,4 +577,45 @@ update();persist();render();alert('身體資料與目標已更新；每日營養
 const previousRender=render;render=function(){previousRender();update();};
 update();
 })();
-</script></body></html>
+</script>
+<style>
+#v327Deficit{margin-top:16px;padding:18px;border-radius:20px;border:1px solid #d7e7dc;background:#f5faf6}
+#v327Deficit h3{margin:0 0 8px;font-size:17px}
+#v327Deficit .v327-big{font-size:30px;font-weight:850;margin:7px 0;color:#253f34}
+#v327Deficit[data-state="deficit"]{border-color:#91c4a2;background:#eaf7ee}
+#v327Deficit[data-state="surplus"]{border-color:#ebc2ad;background:#fff4ed}
+#v327Deficit[data-state="unknown"]{background:#f4f5f3}
+#v327Deficit .v327-bar{height:12px;background:#dbe6df;border-radius:20px;overflow:hidden;margin:10px 0}
+#v327Deficit .v327-fill{height:100%;background:#27855b;width:0%;transition:width .25s}
+#v327Deficit p{line-height:1.7;margin:8px 0}
+</style>
+<script>
+/* V3.27: honest calorie-balance explanation and conservative daily deficit progress. */
+(function(){
+ const balance=document.getElementById('eBalance');if(!balance)return;
+ const tile=balance.closest('.tile');if(!tile||document.getElementById('v327Deficit'))return;
+ const box=document.createElement('section');box.id='v327Deficit';box.dataset.state='unknown';box.setAttribute('aria-live','polite');
+ box.innerHTML='<h3>🎯 今日熱量收支與減脂進度</h3><div class="v327-big" id="v327Headline">讀取中…</div><div id="v327Explain" class="hint"></div><div class="v327-bar"><div class="v327-fill" id="v327Fill"></div></div><p class="hint" id="v327Foot">參考區間：每日估計赤字 200–400 kcal；非必須每日達標，過大赤字也不代表更好。</p>';
+ tile.parentNode.parentNode.insertBefore(box,tile.parentNode.nextSibling);
+ function num(id){const t=document.getElementById(id)?.textContent||'';return Number(t.replace(/[^0-9.-]/g,''))}
+ function update(){
+  const tdee=num('eTdee'),eaten=num('eIntake'),exercise=num('eExercise');
+  const date=typeof selected==='function'?selected():'';
+  const meals=typeof db!=='undefined'&&db.food?db.food.filter(x=>x.date===date):[];
+  const workouts=typeof db!=='undefined'&&db.exercise?db.exercise.filter(x=>x.date===date):[];
+  const incomplete=workouts.some(x=>x.kcal==null||x.kcal==='');
+  const valid=Number.isFinite(tdee)&&tdee>0&&meals.length>0;
+  const status=document.getElementById('v327Headline'),desc=document.getElementById('v327Explain'),fill=document.getElementById('v327Fill');
+  if(!valid){box.dataset.state='unknown';status.textContent=meals.length?'需要有效身體資料':'飲食尚未完整記錄';desc.textContent='尚不能確認今日是否有熱量赤字。請記錄當日飲食、最新體重與身體資料。';fill.style.width='0%';return}
+  const diff=Math.round(tdee-eaten),abs=Math.abs(diff);
+  box.dataset.state=diff>0?'deficit':diff<0?'surplus':'balanced';
+  status.textContent=diff>0?'估計赤字 '+abs+' kcal':diff<0?'估計盈餘 '+abs+' kcal':'估計熱量收支平衡';
+  desc.textContent='估計消耗 '+Math.round(tdee)+' − 已記錄攝取 '+Math.round(eaten)+' = '+(diff>=0?'+':'')+diff+' kcal。'+(incomplete?' 有運動未填消耗熱量。':'')+' 若當日餐點未記完整，結果會失真。';
+  fill.style.width=(diff>0?Math.min(100,Math.round(diff/400*100)):0)+'%';
+  document.getElementById('v327Foot').textContent=diff>400?'目前估計赤字高於 400 kcal；不建議為追求數字而強迫增加運動或減少進食。':diff>=200?'目前落在 200–400 kcal 的參考赤字區間；這仍是估算，不代表保證減重。':'參考區間：每日估計赤字 200–400 kcal；不需要每天都達標。';
+ }
+ const oldRender=render;render=function(){oldRender();update()};
+ update();
+})();
+</script>
+</body></html>

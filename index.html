@@ -544,4 +544,37 @@ const bmr=10*mass+6.25*height-5*age+(sex==='male'?5:-161);const daily=bmr*act,to
 }
 fill();render();
 })();
+</script><script>
+(function(){
+'use strict';
+const form=document.getElementById('settingsForm');
+if(!form)return;
+const keys=['calories','protein','carbs','fat'];
+const el=k=>form.elements.namedItem(k);
+const descriptions={calories:'每日建議攝取熱量（自動計算）',protein:'每日蛋白質（自動計算）',carbs:'每日碳水（自動計算）',fat:'每日脂肪（自動計算）'};
+for(const k of keys){const input=el(k);if(!input)continue;input.readOnly=true;input.required=false;input.setAttribute('aria-label',descriptions[k]);input.style.background='#eef5f0';input.style.color='#255640';input.title='依最新體重、年齡、身高及日常活動量自動計算';const label=input.previousElementSibling;if(label&&label.tagName==='LABEL')label.textContent=descriptions[k];}
+const note=document.createElement('div');note.id='v326GoalExplanation';note.className='hint';note.setAttribute('aria-live','polite');note.style.cssText='padding:12px;background:#eef5f0;border-radius:12px;line-height:1.8;margin:12px 0';el('calories').parentNode.insertBefore(note,el('calories'));
+const advanced=document.createElement('p');advanced.className='hint';advanced.textContent='以上四項由 App 自動計算，不需要手動填寫。目標體重仍可自行修改；運動熱量另計，不會重複算進日常消耗。';el('goal').parentNode.insertBefore(advanced,el('goal'));
+function body(){try{return JSON.parse(localStorage.getItem('55kg_project_body_energy_v1')||'{}')||{}}catch{return {}}}
+function ageFromBirth(s){if(!/^\d{4}-\d{2}-\d{2}$/.test(s||''))return null;const [y,m,d]=s.split('-').map(Number);const dt=new Date(y,m-1,d),today=new Date();if(dt.getFullYear()!==y||dt.getMonth()!==m-1||dt.getDate()!==d||dt>today)return null;let a=today.getFullYear()-y;if(today.getMonth()+1<m||(today.getMonth()+1===m&&today.getDate()<d))a--;return a>=10&&a<=100?a:null}
+function calc(){const a=body();const weights=db.weight.filter(x=>Number(x.kg)>0).sort((x,y)=>x.date.localeCompare(y.date));const mornings=weights.filter(x=>x.period==='morning');const latest=mornings.length?mornings.at(-1):weights.at(-1);const kg=latest&&Number(latest.kg);const height=Number(a.height||165);const age=ageFromBirth(a.birthDate)??Number(a.age||32);const sex=a.sex||'female';const activity=Number(a.activity||1.2);
+if(!kg||height<100||age<10||!['female','male'].includes(sex)||activity<1.1||activity>1.6)return null;
+const bmr=10*kg+6.25*height-5*age+(sex==='male'?5:-161);const daily=bmr*activity;
+// A moderate, non-exercise deficit; do not assume unrecorded exercise.
+const target=Math.round(Math.max(sex==='male'?1500:1200,Math.min(1800,daily-250))/10)*10;
+const protein=Math.round(kg*1.5);const fat=Math.round(target*0.30/9);const carbs=Math.max(0,Math.round((target-protein*4-fat*9)/4));
+return {calories:target,protein,carbs,fat,bmr,daily,kg,age,activity};}
+function update(){const values=calc();if(!values){note.textContent='尚無足夠的有效體重／身體資料，請先到「體重」記錄實際體重，再回設定查看自動計算結果。舊目標暫時保留。';for(const k of keys)el(k).value='—';return;}
+let changed=false;for(const k of keys){if(Number(db.settings[k])!==values[k]){db.settings[k]=values[k];changed=true;}el(k).value=values[k];}
+if(changed)persist();
+note.textContent=`以最新紀錄 ${values.kg} kg、${values.age} 歲計算：BMR 約 ${Math.round(values.bmr)} kcal；不含另記運動的日常消耗約 ${Math.round(values.daily)} kcal。建議飲食目標 ${values.calories} kcal（預留約 ${Math.max(0,Math.round(values.daily-values.calories))} kcal 赤字）；蛋白質按每公斤 1.5g、脂肪約佔 30%，碳水分配剩餘熱量。此為估算，並非醫療處方。`;
+}
+// Stop the legacy submit handler from coercing non-numeric settings to 0.
+form.addEventListener('submit',function(ev){ev.preventDefault();ev.stopImmediatePropagation();const f=new FormData(form);const old=body();const next={...old};for(const k of ['height','age','birthDate','sex','activity','workStyle','workHours'])next[k]=String(f.get(k)||'');try{localStorage.setItem('55kg_project_body_energy_v1',JSON.stringify(next))}catch(e){alert('身體設定儲存失敗：'+e.message);return;}
+const goal=Number(f.get('goal'));if(goal>=20&&goal<=300)db.settings.goal=goal;
+update();persist();render();alert('身體資料與目標已更新；每日營養建議由 App 自動計算。');},true);
+// Recompute after food, exercise, weight changes and after importing a backup.
+const previousRender=render;render=function(){previousRender();update();};
+update();
+})();
 </script></body></html>

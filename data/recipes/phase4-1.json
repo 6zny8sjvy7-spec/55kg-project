@@ -1,0 +1,125 @@
+{
+  "version": "phase4-1",
+  "recipes": [
+    {
+      "id": "recipe:myplate-yogurt-smoothie",
+      "name": "優格果汁冰沙",
+      "category": "其他",
+      "cuisine": null,
+      "brand": null,
+      "source": "recipe",
+      "sourceName": "LSU AgCenter／Purdue Extension 公開配方整理估算",
+      "url": "https://www.lsuagcenter.com/MCMS/RelatedFiles/%7B6C92A6CB-5911-41C3-9D39-A06D7F97865A%7D/Vol10.pdf",
+      "sourceTitle": "LSU AgCenter Nutrition News for Parents, page 2: Low-fat Yogurt Smoothie in a Bag (adapted from Purdue Extension)",
+      "sourceServings": 1,
+      "servings": 1,
+      "method": "將優格、低脂牛奶與已解凍的濃縮果汁混合均勻。不加水、不加油，不經加熱。",
+      "ingredients": [
+        {
+          "name": "無脂香草優格",
+          "grams": 61.25,
+          "foodId": "sr:170906",
+          "url": "https://fdc.nal.usda.gov/food-details/170906/nutrients",
+          "basis": {
+            "kind": "100g",
+            "grams": 100
+          },
+          "nutrition": {
+            "kcal": 78.0,
+            "protein": 2.94,
+            "fat": 0.0,
+            "carbs": 17.0
+          },
+          "state": "即食／未稀釋原料，非烹調生熟換算",
+          "conversion": "原食譜1/4美制cup；SR該優格cup=245g",
+          "portionEvidence": [
+            {
+              "label": "container (4 oz)",
+              "grams": 113.0
+            },
+            {
+              "label": "container (8 oz)",
+              "grams": 227.0
+            },
+            {
+              "label": "cup (8 fl oz)",
+              "grams": 245.0
+            }
+          ]
+        },
+        {
+          "name": "低脂1%牛奶",
+          "grams": 15.25,
+          "foodId": "sr:170872",
+          "url": "https://fdc.nal.usda.gov/food-details/170872/nutrients",
+          "basis": {
+            "kind": "100g",
+            "grams": 100
+          },
+          "nutrition": {
+            "kcal": 42.0,
+            "protein": 3.37,
+            "fat": 0.97,
+            "carbs": 4.99
+          },
+          "state": "即食／未稀釋原料，非烹調生熟換算",
+          "conversion": "原食譜1美制tablespoon；SR該牛奶cup=244g，1cup=16tablespoons",
+          "portionEvidence": [
+            {
+              "label": "fl oz",
+              "grams": 30.5
+            },
+            {
+              "label": "quart",
+              "grams": 976.0
+            },
+            {
+              "label": "cup",
+              "grams": 244.0
+            }
+          ]
+        },
+        {
+          "name": "未稀釋無糖冷凍柳橙濃縮汁",
+          "grams": 10.916666666666666,
+          "foodId": "sr:169923",
+          "url": "https://fdc.nal.usda.gov/food-details/169923/nutrients",
+          "basis": {
+            "kind": "100g",
+            "grams": 100
+          },
+          "nutrition": {
+            "kcal": 148.0,
+            "protein": 2.4,
+            "fat": 0.25,
+            "carbs": 35.2
+          },
+          "state": "即食／未稀釋原料，非烹調生熟換算",
+          "conversion": "原食譜2teaspoons；SR該濃縮汁cup=262g，1cup=48teaspoons",
+          "portionEvidence": [
+            {
+              "label": "cup",
+              "grams": 262.0
+            },
+            {
+              "label": "fl oz",
+              "grams": 33.0
+            }
+          ]
+        }
+      ],
+      "yieldGrams": 87.41666666666667,
+      "yieldEvidence": "冷混合食材重量加總，估計產出；未實際秤重，未扣容器殘留。可用實際秤重修正。",
+      "limitations": "原食譜可選牛奶及果汁種類；本版固定為列示的USDA食材。營養為食材重算，並非原頁營養表或台灣品牌實測；更換品牌應換食材。沒有烹調／吸油損失假設。",
+      "licenseNote": "只整理公開配方的食材事實與自行撰寫的方法，未複製照片或大段原文。USDA食材數值為既有CC0資料。",
+      "verifiedOn": "2026-10-20",
+      "additionalSource": {
+        "url": "https://wayne.osu.edu/sites/wayne/files/imce/Yogurt%20Smoothie%20in%20a%20Bag.pdf",
+        "title": "Ohio State University Extension: Yogurt Smoothie in a Bag",
+        "note": "佐證食材份量及冷混合方式；此份文件使用低脂優格，本版本依MyPlate可選無脂優格並明列食材ID，不冒充同一營養表。"
+      },
+      "originalRecipeUrl": "https://www.myplate.gov/recipes/yogurt-smoothie-bag",
+      "sourceEvidence": "來源第2頁明列1/4 cup低脂或無脂優格、1 tablespoon 1%牛奶、2 teaspoons解凍濃縮果汁。本版選無脂香草優格及柳橙汁；整批為1份依MyPlate原配方1 smoothie。"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "version": "20261020-1",
+  "published": 15367,
+  "audit": {
+    "tfda": {
+      "raw_nutrient_rows": 230152,
+      "raw_foods": 2213,
+      "published": 2213,
+      "complete4": 2160,
+      "partial": 53
+    },
+    "fndds": {
+      "raw_foods": 5432,
+      "excluded_no_nutrition": 1,
+      "published": 5431,
+      "complete4": 5431,
+      "partial": 0
+    },
+    "sr": {
+      "raw_foods": 7793,
+      "merged_exact": 70,
+      "published": 7723,
+      "complete4": 7723,
+      "partial": 0
+    }
+  },
+  "files": 610,
+  "totalBytes": 13238252,
+  "maxPostingBytes": 57026,
+  "maxIndexBytes": 18174,
+  "maxNutritionBytes": 57091,
+  "manifestBytes": 65257,
+  "rawSha256": {
+    "tfda-csv.zip": "9aeb0cdbefad3f82be9b4089f044c8d0bc087a6b7453ba96832d126ff6ea3aa1",
+    "usda-fndds.zip": "dfb06ae7ddc397ccd570b91c14b75438ab2ba39f64f22d321f61d4a52a77f3eb",
+    "usda-sr.zip": "0fe8ae486a2c8eb42cb96413f058deb51863a46c8fb8eeb4b1fb45006dd338ef"
+  }
+}

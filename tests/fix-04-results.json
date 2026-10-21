@@ -55,7 +55,7 @@
     "backup UI fits 390px mobile width",
     "failure to load safety module cannot reset existing main data"
   ],
-  "browser": "153.0.8010.0",
+  "browser": "151.0.7922.34",
   "realIPhoneTested": false,
   "note": "Synthetic isolated browser contexts only; no user-device data accessed."
 }

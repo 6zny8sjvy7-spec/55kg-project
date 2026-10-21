@@ -1,0 +1,661 @@
+{
+  "baseline": "使用者第六階段完整總指令 V1.0，18節逐節拆項，原文對話仍為完整權威基準",
+  "version": "1.0",
+  "baseCommit": "51aaccdd21845f9c89044ff805687b6d24c4245b",
+  "created": "2026-10-21 Asia/Taipei",
+  "changes": [
+    {
+      "date": "2026-10-21",
+      "change": "建立V1.0全部18節編號；開發M1，其他里程碑未宣稱完成"
+    },
+    {
+      "date": "2026-10-21",
+      "change": "M1原型與隔離檢查完成，標為待驗收而非已驗收；M2/M3/M4、體重圖與歷史收合保留未完成"
+    },
+    {
+      "date": "2026-10-21",
+      "change": "經GitHub逐次寫入流程新增隔離預覽；main新增預覽目錄但原631檔SHA不變。第六階段未整合到正式首頁。"
+    }
+  ],
+  "items": [
+    {
+      "id": "P6-01.01",
+      "requirement": "以實際main為基準，保留網址與全部既有功能",
+      "status": "待驗收",
+      "evidence": [
+        "research/base-files.json：631個正式檔案SHA核對",
+        "main＝51aaccd"
+      ]
+    },
+    {
+      "id": "P6-01.02",
+      "requirement": "不得清除重設localStorage或修改歷史原值",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-01.03",
+      "requirement": "免費、合法、不得購買模型動畫或付費API",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-01.04",
+      "requirement": "不冒充完成、不降低手機速度、累積需求",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-02.01",
+      "requirement": "自行建立完整比例立體人體：頭軀幹四肢關節手掌腳",
+      "status": "待驗收",
+      "evidence": [
+        "tests/browser-results.json：47項真Chromium檢查",
+        "tests/kinematics-results.json：110項解析幾何檢查",
+        "iPhone／專業姿勢／外觀待使用者驗收"
+      ]
+    },
+    {
+      "id": "P6-02.02",
+      "requirement": "骨架連續動畫，清楚啞鈴與彈力繩",
+      "status": "待驗收",
+      "evidence": [
+        "tests/browser-results.json：47項真Chromium檢查",
+        "tests/kinematics-results.json：110項解析幾何檢查",
+        "iPhone／專業姿勢／外觀待使用者驗收"
+      ]
+    },
+    {
+      "id": "P6-02.03",
+      "requirement": "正面側面背面與iPhone效能",
+      "status": "待驗收",
+      "evidence": [
+        "tests/browser-results.json：47項真Chromium檢查",
+        "tests/kinematics-results.json：110項解析幾何檢查",
+        "iPhone／專業姿勢／外觀待使用者驗收"
+      ]
+    },
+    {
+      "id": "P6-02.04",
+      "requirement": "可信姿勢來源、幅度核對、未專業驗收須標示",
+      "status": "待驗收",
+      "evidence": [
+        "tests/browser-results.json：47項真Chromium檢查",
+        "tests/kinematics-results.json：110項解析幾何檢查",
+        "iPhone／專業姿勢／外觀待使用者驗收"
+      ]
+    },
+    {
+      "id": "P6-02.05",
+      "requirement": "主要與次要肌群高亮，不能當實際發力偵測",
+      "status": "待驗收",
+      "evidence": [
+        "tests/browser-results.json：47項真Chromium檢查",
+        "tests/kinematics-results.json：110項解析幾何檢查",
+        "iPhone／專業姿勢／外觀待使用者驗收"
+      ]
+    },
+    {
+      "id": "P6-02.06",
+      "requirement": "純程式效果不足時誠實提出免費替代",
+      "status": "開發中",
+      "evidence": []
+    },
+    {
+      "id": "P6-03.01",
+      "requirement": "啞鈴、彈力帶、徒手可擴充動作庫",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-03.02",
+      "requirement": "胸背肩二頭三頭核心臀大腿前大腿後小腿全身分類",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-03.03",
+      "requirement": "名稱器材主次肌群動畫姿勢錯誤難度次數秒數休息額外器材替代來源及狀態",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-03.04",
+      "requirement": "未核對姿勢不可列正式安全教學",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-04.01",
+      "requirement": "肌群時間器材目標強度每日狀態推薦",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-04.02",
+      "requirement": "總時長含暖身主訓練休息收操",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-04.03",
+      "requirement": "可刪替換排序修改秒次組休息強度",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-04.04",
+      "requirement": "調整後重算時長，無法維持目標則顯示差額並確認",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-04.05",
+      "requirement": "儲存與重用課表",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-05.01",
+      "requirement": "近期肌群時間強度訓練量參考輪替恢復",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-05.02",
+      "requirement": "顯示理由、可自行選擇、不永久禁止",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-05.03",
+      "requirement": "不得假裝精確測量恢復",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-06.01",
+      "requirement": "每日腰膝症狀痠痛疲勞強度避免衝擊分開輸入",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-06.02",
+      "requirement": "歷史病史與今日症狀分開，無症狀不一律低強度",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-06.03",
+      "requirement": "低衝擊不等於低強度；有症狀提供降負荷替代",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-06.04",
+      "requirement": "神經症狀胸悶異常喘停止並尋醫，不取代個別醫療評估",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-07.01",
+      "requirement": "開始跟練顯示3D名稱肌群秒數次數組動作序休息下個動作整套剩時進度",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-07.02",
+      "requirement": "開始暫停繼續跳過延休提前完成結束",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-07.03",
+      "requirement": "次數型須使用者確認完成，不以倒數推定完成",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-07.04",
+      "requirement": "單手操作、切換流暢、背景暫停不得錯誤累計",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-08.01",
+      "requirement": "草稿保留日期課表肌群實做動作組時間休息跳過器材負重當日體重心率強度",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-08.02",
+      "requirement": "按實際各階段MET、體重估Gross Net來源與範圍",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-08.03",
+      "requirement": "不將全程高強度、不從動畫測心率、不沿用昨天數據",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-08.04",
+      "requirement": "完成確認後一鍵獨立保存、首頁週統計肌群歷史同步、去重",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-08.05",
+      "requirement": "未完整跟練不得計時器自動存完整",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-09.01",
+      "requirement": "檢查未填組數是否當持續運動",
+      "status": "尚未開始",
+      "evidence": [
+        "research/existing-issues.md：已唯讀定位，尚未修改正式版"
+      ]
+    },
+    {
+      "id": "P6-09.02",
+      "requirement": "有組數區分工作休息未涵蓋時間",
+      "status": "尚未開始",
+      "evidence": [
+        "research/existing-issues.md：已唯讀定位，尚未修改正式版"
+      ]
+    },
+    {
+      "id": "P6-09.03",
+      "requirement": "另設暖身收操且詳細時間熱量貢獻",
+      "status": "尚未開始",
+      "evidence": [
+        "research/existing-issues.md：已唯讀定位，尚未修改正式版"
+      ]
+    },
+    {
+      "id": "P6-09.04",
+      "requirement": "27分鐘含25組45/15及2分鐘收操案例核對",
+      "status": "尚未開始",
+      "evidence": [
+        "research/existing-issues.md：已唯讀定位，尚未修改正式版"
+      ]
+    },
+    {
+      "id": "P6-09.05",
+      "requirement": "不改舊值、不高估、不阻礙M1",
+      "status": "尚未開始",
+      "evidence": [
+        "research/existing-issues.md：已唯讀定位，尚未修改正式版"
+      ]
+    },
+    {
+      "id": "P6-10.01",
+      "requirement": "7/30/90/全部歷史切換",
+      "status": "尚未開始",
+      "evidence": [
+        "research/existing-issues.md：已唯讀定位，尚未修改正式版"
+      ]
+    },
+    {
+      "id": "P6-10.02",
+      "requirement": "早晨主要曲線、舊日期不冒充晨重、輔助標記",
+      "status": "尚未開始",
+      "evidence": [
+        "research/existing-issues.md：已唯讀定位，尚未修改正式版"
+      ]
+    },
+    {
+      "id": "P6-10.03",
+      "requirement": "保留同日所有時段原值",
+      "status": "尚未開始",
+      "evidence": [
+        "research/existing-issues.md：已唯讀定位，尚未修改正式版"
+      ]
+    },
+    {
+      "id": "P6-10.04",
+      "requirement": "7天平均與合理Y軸",
+      "status": "尚未開始",
+      "evidence": [
+        "research/existing-issues.md：已唯讀定位，尚未修改正式版"
+      ]
+    },
+    {
+      "id": "P6-10.05",
+      "requirement": "點選顯示日期kg類型",
+      "status": "尚未開始",
+      "evidence": [
+        "research/existing-issues.md：已唯讀定位，尚未修改正式版"
+      ]
+    },
+    {
+      "id": "P6-10.06",
+      "requirement": "不清歷史、不影響BMR TDEE與統計",
+      "status": "尚未開始",
+      "evidence": [
+        "research/existing-issues.md：已唯讀定位，尚未修改正式版"
+      ]
+    },
+    {
+      "id": "P6-11.01",
+      "requirement": "飲食體重運動及其他增長清單預設收合",
+      "status": "尚未開始",
+      "evidence": [
+        "research/existing-issues.md：已唯讀定位，尚未修改正式版"
+      ]
+    },
+    {
+      "id": "P6-11.02",
+      "requirement": "摘要最新紀錄箭頭，展開保留編輯刪除",
+      "status": "尚未開始",
+      "evidence": [
+        "research/existing-issues.md：已唯讀定位，尚未修改正式版"
+      ]
+    },
+    {
+      "id": "P6-11.03",
+      "requirement": "日期分組與分批查看更多",
+      "status": "尚未開始",
+      "evidence": [
+        "research/existing-issues.md：已唯讀定位，尚未修改正式版"
+      ]
+    },
+    {
+      "id": "P6-11.04",
+      "requirement": "不刪資料、不影響統計、手機流暢",
+      "status": "尚未開始",
+      "evidence": [
+        "research/existing-issues.md：已唯讀定位，尚未修改正式版"
+      ]
+    },
+    {
+      "id": "P6-12.01",
+      "requirement": "免費可授權技術，不購模型動畫或付費服務",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-12.02",
+      "requirement": "新外部費用須回報，不自動開通",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-12.03",
+      "requirement": "瀏覽器本機執行、不每次呼叫AI",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-13.01",
+      "requirement": "免ZIP免安裝免另註冊瀏覽器URL預覽",
+      "status": "待驗收",
+      "evidence": [
+        "preview/phase6-m1：Pages #19成功",
+        "tests/live-http-results.json：18個HTTP SHA一致",
+        "iPhone與外觀／專業姿勢尚待驗收"
+      ]
+    },
+    {
+      "id": "P6-13.02",
+      "requirement": "優先原repo與Pages，預覽不得影響正式",
+      "status": "待驗收",
+      "evidence": [
+        "preview/phase6-m1：Pages #19成功",
+        "tests/live-http-results.json：18個HTTP SHA一致",
+        "iPhone與外觀／專業姿勢尚待驗收"
+      ]
+    },
+    {
+      "id": "P6-13.03",
+      "requirement": "儲存須真實隔離，不能只靠路徑不同",
+      "status": "待驗收",
+      "evidence": [
+        "tests/browser-results.json：47項真Chromium檢查",
+        "tests/kinematics-results.json：110項解析幾何檢查",
+        "iPhone／專業姿勢／外觀待使用者驗收"
+      ]
+    },
+    {
+      "id": "P6-13.04",
+      "requirement": "同源需可信隔離並驗證localStorage IndexedDB",
+      "status": "待驗收",
+      "evidence": [
+        "tests/browser-results.json：47項真Chromium檢查",
+        "tests/kinematics-results.json：110項解析幾何檢查",
+        "iPhone／專業姿勢／外觀待使用者驗收"
+      ]
+    },
+    {
+      "id": "P6-13.05",
+      "requirement": "實際確認部署設定、不虛構URL、不含個人備份",
+      "status": "待驗收",
+      "evidence": [
+        "preview/phase6-m1：Pages #19成功",
+        "tests/live-http-results.json：18個HTTP SHA一致",
+        "iPhone與外觀／專業姿勢尚待驗收"
+      ]
+    },
+    {
+      "id": "P6-13.06",
+      "requirement": "不可安全實作先回報，不未確認修改正式",
+      "status": "開發中",
+      "evidence": []
+    },
+    {
+      "id": "P6-14.01",
+      "requirement": "M1：完整立體人體＋啞鈴彎舉／彈力繩划船／臀腿動作，可瀏覽器操作",
+      "status": "待驗收",
+      "evidence": [
+        "tests/browser-results.json：47項真Chromium檢查",
+        "tests/kinematics-results.json：110項解析幾何檢查",
+        "iPhone／專業姿勢／外觀待使用者驗收"
+      ]
+    },
+    {
+      "id": "P6-14.02",
+      "requirement": "M1：外觀姿勢器材肌群動畫與iPhone驗收",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-14.03",
+      "requirement": "M2：智慧課表編輯時間保存",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-14.04",
+      "requirement": "M3：跟練倒數確認估熱量與舊運動整合",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-14.05",
+      "requirement": "M4：外觀動作驗收後才擴庫",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-14.06",
+      "requirement": "同步待辦：體重圖、收合歷史、熱量模型",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-15.01",
+      "requirement": "3D非火柴人、連續動作肌群器材姿勢效能",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-15.02",
+      "requirement": "推薦可選肌群器材分鐘，含暖休收操、替換排序時長輪替",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-15.03",
+      "requirement": "跟練暫停跳過休息實做確認背景計時",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-15.04",
+      "requirement": "實做GrossNet獨立記錄與同步，不覆歷史",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-15.05",
+      "requirement": "體重區間舊值平均清單效能編刪",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-15.06",
+      "requirement": "回歸飲食推薦估算品牌條碼15367食品610分片收藏自訂影片熱量備份",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-15.07",
+      "requirement": "本機自動化、真瀏覽器、iPhone、未驗證分開",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-16.01",
+      "requirement": "目前只准唯讀研究設計獨立開發測試",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-16.02",
+      "requirement": "GitHub分支commit設定預覽須先說影響與逐次允許一次",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-16.03",
+      "requirement": "不得強推main、未授權正式發布、清移歷史、覆寫備份、收費",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-16.04",
+      "requirement": "正式第六階段待外觀動作核心跟練驗收與另行授權",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-16.05",
+      "requirement": "免費做不到須誠實說明",
+      "status": "尚未開始",
+      "evidence": []
+    },
+    {
+      "id": "P6-17.01",
+      "requirement": "需求永久編號與累積管理，新意見不取代舊需求",
+      "status": "待驗收",
+      "evidence": [
+        "REQUIREMENTS.md",
+        "requirements.json"
+      ]
+    },
+    {
+      "id": "P6-17.02",
+      "requirement": "尚未開始開發中待驗收已驗收狀態",
+      "status": "待驗收",
+      "evidence": [
+        "REQUIREMENTS.md",
+        "requirements.json"
+      ]
+    },
+    {
+      "id": "P6-17.03",
+      "requirement": "版本與增修條件紀錄，衝突先指出",
+      "status": "待驗收",
+      "evidence": [
+        "REQUIREMENTS.md",
+        "requirements.json"
+      ]
+    },
+    {
+      "id": "P6-17.04",
+      "requirement": "里程碑對應測試證據與未完成清單",
+      "status": "待驗收",
+      "evidence": [
+        "REQUIREMENTS.md",
+        "requirements.json"
+      ]
+    },
+    {
+      "id": "P6-17.05",
+      "requirement": "未來Work指令以完整V1基準為底",
+      "status": "待驗收",
+      "evidence": [
+        "REQUIREMENTS.md",
+        "requirements.json"
+      ]
+    },
+    {
+      "id": "P6-18.01",
+      "requirement": "先唯讀正式版本現有功能與資料安全",
+      "status": "待驗收",
+      "evidence": [
+        "research/base-files.json：631個正式檔案SHA核對",
+        "main＝51aaccd"
+      ]
+    },
+    {
+      "id": "P6-18.02",
+      "requirement": "評估免費建模骨架肌群",
+      "status": "待驗收",
+      "evidence": [
+        "tests/browser-results.json：47項真Chromium檢查",
+        "tests/kinematics-results.json：110項解析幾何檢查",
+        "iPhone／專業姿勢／外觀待使用者驗收"
+      ]
+    },
+    {
+      "id": "P6-18.03",
+      "requirement": "確認安全瀏覽器預覽",
+      "status": "待驗收",
+      "evidence": [
+        "preview/phase6-m1：Pages #19成功",
+        "tests/live-http-results.json：18個HTTP SHA一致",
+        "iPhone與外觀／專業姿勢尚待驗收"
+      ]
+    },
+    {
+      "id": "P6-18.04",
+      "requirement": "獨立副本製作3個真動作原型",
+      "status": "待驗收",
+      "evidence": [
+        "tests/browser-results.json：47項真Chromium檢查",
+        "tests/kinematics-results.json：110項解析幾何檢查",
+        "iPhone／專業姿勢／外觀待使用者驗收"
+      ]
+    },
+    {
+      "id": "P6-18.05",
+      "requirement": "提供可操作URL與外觀姿勢效能隔離報告",
+      "status": "待驗收",
+      "evidence": [
+        "preview/phase6-m1：Pages #19成功",
+        "tests/live-http-results.json：18個HTTP SHA一致",
+        "iPhone與外觀／專業姿勢尚待驗收"
+      ]
+    },
+    {
+      "id": "P6-18.06",
+      "requirement": "體重與清單列待辦，現在不正式發布",
+      "status": "尚未開始",
+      "evidence": []
+    }
+  ]
+}

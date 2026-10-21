@@ -1,0 +1,31 @@
+{
+  "checks": 25,
+  "passed": [
+    "real zero kcal reusable",
+    "unknown protein not zero",
+    "zero remains zero after ratio",
+    "failed save leaves in-memory history unchanged",
+    "failed save leaves persistent history unchanged",
+    "failed save keeps draft",
+    "retry after storage recovery succeeds once",
+    "320px home no horizontal overflow",
+    "320px food no horizontal overflow",
+    "320px weight no horizontal overflow",
+    "320px exercise no horizontal overflow",
+    "390px home no horizontal overflow",
+    "390px food no horizontal overflow",
+    "390px weight no horizontal overflow",
+    "390px exercise no horizontal overflow",
+    "430px home no horizontal overflow",
+    "430px food no horizontal overflow",
+    "430px weight no horizontal overflow",
+    "430px exercise no horizontal overflow",
+    "1200px home no horizontal overflow",
+    "1200px food no horizontal overflow",
+    "1200px weight no horizontal overflow",
+    "1200px exercise no horizontal overflow",
+    "database failure explains manual fallback",
+    "manual recording works despite food data outage"
+  ],
+  "scope": "Real Chromium using synthetic storage-full and request-failure injection; not iPhone"
+}

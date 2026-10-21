@@ -1,0 +1,83 @@
+{
+  "browser": "153.0.8010.0",
+  "network": "local HTTP; warm OS file cache, no bandwidth throttling; not cellular or iPhone",
+  "before": [
+    {
+      "ms": 130.946418,
+      "requests": 1,
+      "resources": [],
+      "htmlBytes": 336989
+    },
+    {
+      "ms": 124.24729000000002,
+      "requests": 1,
+      "resources": [],
+      "htmlBytes": 336989
+    },
+    {
+      "ms": 152.96812899999998,
+      "requests": 1,
+      "resources": [],
+      "htmlBytes": 336989
+    }
+  ],
+  "after": [
+    {
+      "ms": 151.56593599999985,
+      "requests": 4,
+      "resources": [
+        {
+          "url": "storage-safety.js?v=fix-01-04-20261021",
+          "bytes": 4480
+        },
+        {
+          "url": "history-fixes.js?v=fix-01-04-20261021",
+          "bytes": 16676
+        },
+        {
+          "url": "backup-local.js?v=fix-01-04-20261021",
+          "bytes": 11079
+        }
+      ],
+      "htmlBytes": 338311
+    },
+    {
+      "ms": 146.71889699999997,
+      "requests": 4,
+      "resources": [
+        {
+          "url": "storage-safety.js?v=fix-01-04-20261021",
+          "bytes": 4480
+        },
+        {
+          "url": "history-fixes.js?v=fix-01-04-20261021",
+          "bytes": 16676
+        },
+        {
+          "url": "backup-local.js?v=fix-01-04-20261021",
+          "bytes": 11079
+        }
+      ],
+      "htmlBytes": 338311
+    },
+    {
+      "ms": 143.07038699999998,
+      "requests": 4,
+      "resources": [
+        {
+          "url": "storage-safety.js?v=fix-01-04-20261021",
+          "bytes": 4480
+        },
+        {
+          "url": "history-fixes.js?v=fix-01-04-20261021",
+          "bytes": 16676
+        },
+        {
+          "url": "backup-local.js?v=fix-01-04-20261021",
+          "bytes": 11079
+        }
+      ],
+      "htmlBytes": 338311
+    }
+  ]
+}

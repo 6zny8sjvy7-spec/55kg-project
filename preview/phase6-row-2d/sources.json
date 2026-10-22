@@ -1,0 +1,34 @@
+[
+  {
+    "id": "mayo",
+    "url": "https://www.mayoclinic.org/healthy-lifestyle/fitness/multimedia/seated-row/vid-20084669",
+    "read": "2026-10-22",
+    "status": "完整文字逐字稿可讀；未宣稱觀看串流影片",
+    "summary": "腳底固定彈力繩、膝微彎、中立脊椎，手肘向後拉，肩胛接近，平順控制回程。以此腳底固定版本為姿勢基準。",
+    "use": "只轉述動作原則，不複製原影片或圖片"
+  },
+  {
+    "id": "ace-row",
+    "url": "https://www.acefitness.org/resources/everyone/exercise-library/48/seated-row/",
+    "read": "2026-10-22",
+    "status": "正文可讀",
+    "summary": "此頁為滑輪器械版本，僅用來核對手肘靠肋骨、拉向腹前、短暫停留與慢速回程。不能把其器械圖冒稱腳底彈力帶版本。",
+    "use": "只轉述原則"
+  },
+  {
+    "id": "openstax",
+    "url": "https://openstax.org/books/anatomy-and-physiology-2e/pages/11-5-muscles-of-the-pectoral-girdle-and-upper-limbs",
+    "read": "2026-10-22",
+    "status": "肌肉功能表與文字可讀",
+    "summary": "核對菱形肌肩胛內收、斜方肌肩胛功能、背闊肌位置及上臂作用；原創圖層以區域提示表示，菱形肌為深層，以虛線示意而非表面肌肉描摹。",
+    "use": "原創解剖區域圖，不直接重用教材圖片"
+  },
+  {
+    "id": "ace-research",
+    "url": "https://www.acefitness.org/continuing-education/certified/april-2018/6959/ace-sponsored-research-what-is-the-best-back-exercise/",
+    "read": "2026-10-22",
+    "status": "正文可讀",
+    "summary": "用於檢查划船與中／下斜方肌的參與，並非本樣本的肌電實測。主要／次要標籤屬教學分組，下斜方肌作用會隨動作而變，不應宣稱與背闊肌等量發力。",
+    "use": "只作資料核對，不挪用研究數值"
+  }
+]
